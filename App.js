@@ -1,11 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View, Image, StyleSheet } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.text}>Aguante macabi</Text>
+      <Image source={require('./assets/macabi.png')} style={styles.image} />
     </View>
   );
 }
@@ -13,8 +12,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 32, 
+    color: 'black',
+    transform: [{ rotate: '180deg' }],
+  },
+  image: {
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
   },
 });
